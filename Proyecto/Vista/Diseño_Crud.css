@@ -1,0 +1,112 @@
+/*Quita el diseño por defecto de cada navegador*/
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20220314/pngtree-photo-of-shelf-commodity-supermarket-image_1013437.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh; /* Viewport Height : Para que se adapte a la pantalla*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    padding: 40px;
+}
+
+body::before { /*Agrega contenido sin necesidad de más HTML*/
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a2540b3;
+    z-index: 0;
+}
+
+h1 {
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 80px;
+    text-shadow: 0 4px 15px #00000080;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.regresar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #ffffff26;
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 14.4px;
+    font-weight: 500;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    border: 2px solid #ffffff4d;
+    border-radius: 12px;
+    padding: 10px 20px;
+    box-shadow: 0 8px 25px #0000004d;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 10;
+    min-width: auto;
+}
+
+.regresar:hover {
+    background: #ffffff40;
+    border-color: #ffffff80;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px #00000066;
+}
+
+section {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    position: relative;
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: #ffffff26;
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 20.8px;
+    font-weight: 600;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    border: 2px solid #ffffff4d;
+    border-radius: 20px;
+    padding: 20px 50px;
+    box-shadow: 0 8px 25px #0000004d;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-width: 220px;
+}
+
+button:hover {
+    background: #ffffff40;
+    border-color: #ffffff80;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px #00000066;
+}
+
+button:active {
+    transform: translateY(-1px);
+}

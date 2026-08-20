@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0a1929;
+    min-height: 100vh;
+    padding: 40px 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #1e4d6b66, transparent 70%);
+    top: -200px;
+    right: -200px;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #0a254066, transparent 70%);
+    bottom: -150px;
+    left: -150px;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+header {
+    background: white;
+    padding: 40px 60px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    box-shadow: 
+        0 25px 70px #00000066,
+        0 0 0 1px #ffffff80;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(135deg, #1e4d6b, #0a2540);
+    border-radius: 30px;
+    z-index: -1;
+}
+
+header h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    text-shadow: 0 4px 15px #00000080;
+    margin: 0;
+    display: inline-block;
+}
+
+.regresar {
+    background: linear-gradient(135deg, #ff6f3c, #ff8c5a);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    color: white;
+    box-shadow: 0 8px 25px #ff6f3c4d;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.regresar:hover {
+    background: linear-gradient(135deg, #ff5722, #ff6f3c);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px #ff6f3c66;
+}
+
+.buscar-box {
+    background: white;
+    padding: 35px 60px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    width: 100%;
+    box-shadow: 
+        0 25px 70px #00000066,
+        0 0 0 1px #ffffff80;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buscar-contenedor {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.buscar-contenedor input {
+    flex: 2;
+}
+
+.buscar-contenedor button {
+    height: 48px;
+    padding: 0 25px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.buscar-contenedor button:first-of-type {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    box-shadow: 0 8px 25px #007bff4d;
+}
+
+.buscar-contenedor button:first-of-type:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px #007bff66;
+}
+
+.buscar-contenedor button:last-of-type {
+    background: linear-gradient(135deg, #6c757d, #5a6268);
+    box-shadow: 0 8px 25px #6c757d4d;
+}
+
+.buscar-contenedor button:last-of-type:hover {
+    background: linear-gradient(135deg, #5a6268, #495057);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px #6c757d66;
+}
+
+.buscar-box input {
+    width: 100%;
+    height: 58px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16.8px;
+    border: 2px solid #e0e7ef;
+    background: #f8fafb;
+    color: #333;
+    border-radius: 15px;
+    padding: 0 22px;
+    transition: all 0.3s ease;
+}
+
+.buscar-contenedor input {
+    height: 58px;
+    width: 600px;
+}
+
+.buscar-box input::placeholder {
+    color: #00000066;
+}
+
+.buscar-box input:hover {
+    border-color: #cbd5e1;
+    background: white;
+}
+
+.buscar-box input:focus {
+    outline: none;
+    border-color: #1e4d6b;
+    background: white;
+    box-shadow: 
+        0 0 0 4px #1e4d6b1a,
+        0 4px 12px #1e4d6b26;
+}
+
+.botones-filtro {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.botones-filtro button {
+    height: 48px;
+    padding: 0 25px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 8px 25px #28a7454d;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.botones-filtro button:hover {
+    background: linear-gradient(135deg, #218838, #1fa87a);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px #28a74566;
+}
+
+.tabla-contenedor {
+    background: white;
+    padding: 40px 60px;
+    border-radius: 30px;
+    box-shadow: 
+        0 25px 70px #00000066,
+        0 0 0 1px #ffffff80;
+    position: relative;
+    z-index: 1;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+thead {
+    background: linear-gradient(135deg, #1e4d6b, #0a2540);
+    color: white;
+}
+
+thead th {
+    padding: 18px 20px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+thead th:first-child {
+    border-radius: 15px 0 0 0;
+}
+
+thead th:last-child {
+    border-radius: 0 15px 0 0;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e0e7ef;
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background: #f8fafb;
+    transform: scale(1.01);
+    box-shadow: 0 4px 15px #00000026;
+}
+
+tbody td {
+    padding: 18px 20px;
+    color: #333;
+    font-size: 15px;
+    border: none;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 15px;
+}
+
+tbody tr:last-child td:last-child {
+    border-radius: 0 0 15px 0;
+}
+
+.btn-accion {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-right: 8px;
+}
+
+.btn-editar {
+    background: #17a2b8;
+    color: white;
+}
+
+.btn-editar:hover {
+    background: #138496;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(23, 162, 184, 0.3);
+}
+
+.btn-eliminar {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background: #c82333;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}

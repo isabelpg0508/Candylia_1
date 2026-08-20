@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #0a2540 0%, #0d3a5c 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+section {
+    background: #fffffffa;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px #00000066;
+    width: 100%;
+    max-width: 480px;
+    padding: 50px 45px;
+}
+
+h1 {
+    text-align: center;
+    color: #0a2540;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e1e8ed;
+}
+
+label {
+    display: block;
+    color: #0a2540;
+    font-size: 15.2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+}
+
+input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e1e8ed;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    background: #f8fafb;
+    color: #0a2540;
+    margin-bottom: 25px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1e4d6b;
+    background: white;
+    box-shadow: 0 0 0 4px #1e4d6b1a;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #1e4d6b, #0a2540);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 17.6px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px #1e4d6b4d;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0a2540, #1e4d6b);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px #1e4d6b66;
+}
+
+button:active {
+    transform: translateY(0);
+}
